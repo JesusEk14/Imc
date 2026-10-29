@@ -1,8 +1,8 @@
-﻿namespace Imc.Maui.Models
+﻿namespace Imc.Models
 {
     public static class CalculadoraImc
     {
-        public static decimal IndiceDeMasaCorpotal(
+        public static decimal IndiceDeMasaCorporal(
             decimal peso, decimal estatura)
         {
             return peso / (estatura * estatura);

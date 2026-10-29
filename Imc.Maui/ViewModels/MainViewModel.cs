@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Imc.Maui.Models;
+using Imc.Models;
 
 namespace Imc.Maui.ViewModels
 {
@@ -30,7 +30,7 @@ namespace Imc.Maui.ViewModels
             bool EstaturaEsValida = decimal.TryParse(Estatura, out estatura);
             if (PesoEsValido && EstaturaEsValida)
             {
-                decimal imc = CalculadoraImc.IndiceDeMasaCorpotal(peso, estatura);
+                decimal imc = CalculadoraImc.IndiceDeMasaCorporal(peso, estatura);
                 Imc = imc.ToString("F4");
                 EstadoNutricional = CalculadoraImc.SituacionNutricional(imc);
             }
